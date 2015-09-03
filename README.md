@@ -1,5 +1,7 @@
 # gearman-connection
 
+[![Build Status](https://travis-ci.org/enlightened-dc/gearman-connection.svg)](https://travis-ci.org/enlightened-dc/gearman-connection)
+
 A simple and clean library to get informations from your [gearman](http://gearman.org/) jobserver.
 
 ## Minimal example usage:
