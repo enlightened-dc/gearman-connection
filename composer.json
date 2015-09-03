@@ -1,0 +1,32 @@
+{
+  "name": "enlightened-dc/gearman-connection",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tommy Muehle",
+      "email": "tommy.muehle@gmail.com"
+    },
+    {
+      "name": "Michael Schindler",
+      "email": "mi-schi@gmx.net"
+    }
+  ],
+  "support": {
+    "source": "https://github.com/enlightened-dc/gearman-connection",
+    "issues": "https://github.com/enlightened-dc/gearman-connection/issues"
+  },
+  "require": {
+    "php": ">=5.4.0",
+    "ext-gearman": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "@stable"
+  },
+  "autoload": {
+    "psr-4": { "EnlightenedDC\\Gearman\\": "src/" }
+  },
+  "autoload-dev": {
+    "psr-4": { "EnlightenedDC\\Gearman\\Tests\\": "tests/" }
+  }
+}
