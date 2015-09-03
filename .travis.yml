@@ -13,4 +13,4 @@ install:
   - composer install
 script:
   - gearmand -d
-  - phpunit -c phpunit.xml.dist --coverage-clover=coverage.clover
+  - vendor/bin/phpunit -c phpunit.xml.dist --coverage-clover=coverage.clover
