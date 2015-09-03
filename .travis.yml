@@ -4,19 +4,13 @@ php:
   - 5.5
   - 5.6
   - nightly
-before_script:
-  - sudo apt-get install libboost-all-dev
-  - sudo apt-get install gperf
-  - sudo apt-get install libuuid1
-  - sudo apt-get install uuid-dev
-  - wget https://launchpad.net/gearmand/1.2/1.1.11/+download/gearmand-1.1.11.tar.gz
-  - tar xf gearmand-1.1.11.tar.gz
-  - cd gearmand-1.1.11
-  - ./configure
-  - make
-  - sudo make install
-  - cd -
-  - yes | pecl install gearman
+before_install:
+  - composer self-update
+install:
+  - sudo apt-get remove gearman-job-server
+  - sudo apt-get install gearman-job-server libgearman-dev
+  - printf "\n"| pecl install gearman-1.0.3
   - composer install
 script:
-  - vendor/bin/phpunit
+  - gearmand -d
+  - phpunit -c phpunit.xml.dist --coverage-clover=coverage.clover
