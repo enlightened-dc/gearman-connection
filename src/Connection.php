@@ -3,7 +3,6 @@
 namespace EnlightenedDC\Gearman;
 
 use EnlightenedDC\Gearman\Exception\GearmanConnectionException;
-use EnlightenedDC\Gearman\Exception\NoGearmanConnectionException;
 
 /**
  * Class Connection
@@ -28,8 +27,6 @@ class Connection
     /**
      * @param array $parameters
      * @param bool  $autoConnect
-     *
-     * @throws NoGearmanConnectionException
      */
     public function __construct(array $parameters =[], $autoConnect = true)
     {
@@ -68,7 +65,7 @@ class Connection
      * @param float $timeout
      *
      * @return bool
-     * @throws NoGearmanConnectionException
+     * @throws GearmanConnectionException
      */
     public function connect($timeout = 5.0)
     {
@@ -88,7 +85,7 @@ class Connection
         );
 
         if (false === $this->isConnected()) {
-            throw new NoGearmanConnectionException($errorMessage, $errorNumber);
+            throw new GearmanConnectionException($errorMessage, $errorNumber);
         }
 
         return true;
@@ -121,12 +118,11 @@ class Connection
      *
      * @return Response
      * @throws GearmanConnectionException
-     * @throws NoGearmanConnectionException
      */
     public function send(Request $request)
     {
         if (false === $this->isConnected()) {
-            throw new NoGearmanConnectionException();
+            throw new GearmanConnectionException('No connection established.');
         }
 
         $isWritten = fwrite(
@@ -136,7 +132,7 @@ class Connection
         );
 
         if (false === $isWritten) {
-            throw new GearmanConnectionException();
+            throw new GearmanConnectionException('Cant send command!');
         }
 
         $response = new Response();
