@@ -13,3 +13,5 @@ install:
 script:
   - gearmand -d
   - phpunit --coverage-clover=coverage.clover
+notifications:
+  email: false
