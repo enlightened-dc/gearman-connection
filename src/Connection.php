@@ -53,11 +53,7 @@ class Connection
      */
     public function getHost()
     {
-        if (true === isset($this->parameters['host'])) {
-            return $this->parameters['host'];
-        }
-
-        return null;
+        return $this->parameters['host'];
     }
 
     /**
@@ -65,11 +61,7 @@ class Connection
      */
     public function getPort()
     {
-        if (true === isset($this->parameters['port'])) {
-            return $this->parameters['port'];
-        }
-
-        return null;
+        return $this->parameters['port'];
     }
 
     /**
