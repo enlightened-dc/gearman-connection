@@ -12,7 +12,7 @@
       "email": "mi-schi@gmx.net"
     }
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "support": {
     "source": "https://github.com/enlightened-dc/gearman-connection",
     "issues": "https://github.com/enlightened-dc/gearman-connection/issues"
