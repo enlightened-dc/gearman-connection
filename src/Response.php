@@ -1,11 +1,9 @@
 <?php
 
-namespace EnlightenedDC\Gearman;
+namespace TM\Gearman;
 
 /**
- * Class Response
- *
- * @package EnlightenedDC\Gearman
+ * @package TM\Gearman
  */
 class Response
 {

@@ -1,11 +1,9 @@
 <?php
 
-namespace EnlightenedDC\Gearman;
+namespace TM\Gearman;
 
 /**
- * Class Request
- *
- * @package EnlightenedDC\Gearman
+ * @package TM\Gearman
  */
 class Request
 {

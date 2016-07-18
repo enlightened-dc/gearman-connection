@@ -1,13 +1,11 @@
 <?php
 
-namespace EnlightenedDC\Gearman;
+namespace TM\Gearman;
 
-use EnlightenedDC\Gearman\Exception\GearmanConnectionException;
+use TM\Gearman\Exception\GearmanConnectionException;
 
 /**
- * Class Connection
- *
- * @package EnlightenedDC\Gearman
+ * @package TM\Gearman
  */
 class Connection
 {
@@ -28,7 +26,7 @@ class Connection
      * @param array $parameters
      * @param bool  $autoConnect
      */
-    public function __construct(array $parameters =[], $autoConnect = true)
+    public function __construct(array $parameters = [], $autoConnect = true)
     {
         $this->parameters = array_merge($this->parameters, $parameters);
 

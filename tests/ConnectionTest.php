@@ -1,15 +1,14 @@
 <?php
 
-namespace EnlightenedDC\Gearman\Tests;
+namespace TM\Gearman\Tests;
 
-use EnlightenedDC\Gearman\Connection;
-use EnlightenedDC\Gearman\Request;
-use EnlightenedDC\Gearman\Exception\GearmanConnectionException;
+use TM\Gearman\Connection;
+use TM\Gearman\Request;
+use TM\Gearman\Exception\GearmanConnectionException;
+use TM\Gearman\Response;
 
 /**
- * Class ConnectionTest
- *
- * @coversDefaultClass \EnlightenedDC\Gearman\Connection
+ * @coversDefaultClass \TM\Gearman\Connection
  */
 class ConnectionTest extends \PHPUnit_Framework_TestCase
 {
@@ -46,7 +45,7 @@ class ConnectionTest extends \PHPUnit_Framework_TestCase
         try {
             $connection = new Connection();
             $response = $connection->send(new Request('status'));
-            $this->assertInstanceOf('EnlightenedDC\Gearman\Response', $response);
+            $this->assertInstanceOf(Response::class, $response);
         } catch (GearmanConnectionException $exception) {
             $this->markTestSkipped(
                 'You need a running gearmand instance with default parameters for this test!

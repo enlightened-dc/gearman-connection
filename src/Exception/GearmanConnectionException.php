@@ -1,11 +1,9 @@
 <?php
 
-namespace EnlightenedDC\Gearman\Exception;
+namespace TM\Gearman\Exception;
 
 /**
- * Class GearmanConnectionException
- *
- * @package EnlightenedDC\Gearman\Exception
+ * @package TM\Gearman\Exception
  */
 class GearmanConnectionException extends \Exception
 {
