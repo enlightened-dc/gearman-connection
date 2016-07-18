@@ -1,5 +1,13 @@
 {
-  "name": "enlightened-dc/gearman-connection",
+  "name": "tm/gearman-connection",
+  "description": "A simple and clean library to get informations from your gearman jobserver.",
+  "keywords": [
+    "gearman",
+    "connection",
+    "gearman-connection",
+    "jobserver"
+  ],
+  "homepage": "https://github.com/tommy-muehle/php-gearman-connection",
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -12,22 +20,27 @@
       "email": "mi-schi@gmx.net"
     }
   ],
-  "version": "1.0.1",
   "support": {
-    "source": "https://github.com/enlightened-dc/gearman-connection",
-    "issues": "https://github.com/enlightened-dc/gearman-connection/issues"
+    "email": "tommy.muehle@gmail.com",
+    "issues": "https://github.com/tommy-muehle/php-gearman-connection/issues",
+    "docs": "https://github.com/tommy-muehle/php-gearman-connection/blob/master/README.md",
+    "source": "https://github.com/tommy-muehle/php-gearman-connection/tree/master"
   },
   "require": {
-    "php": ">=5.4.0",
+    "php": "^5.5.9|~7.0",
     "ext-gearman": "*"
   },
   "require-dev": {
-    "phpunit/phpunit": "@stable"
+    "phpunit/phpunit": "@stable",
+    "codeclimate/php-test-reporter": "dev-master"
   },
   "autoload": {
-    "psr-4": { "EnlightenedDC\\Gearman\\": "src/" }
+    "psr-4": { "TM\\Gearman\\": "src/" }
   },
   "autoload-dev": {
-    "psr-4": { "EnlightenedDC\\Gearman\\Tests\\": "tests/" }
+    "psr-4": { "TM\\Gearman\\Tests\\": "tests/" }
+  },
+  "config": {
+    "bin-dir": "bin"
   }
 }

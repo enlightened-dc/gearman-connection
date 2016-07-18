@@ -1,6 +1,8 @@
 # gearman-connection
 
-[![Build Status](https://travis-ci.org/enlightened-dc/gearman-connection.svg)](https://travis-ci.org/enlightened-dc/gearman-connection)
+[![Build Status](https://travis-ci.org/tommy-muehle/php-gearman-connection.svg)](https://travis-ci.org/tommy-muehle/php-gearman-connection)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/tommy-muehle/php-gearman-connection/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/tommy-muehle/php-gearman-connection.svg)](https://github.com/php-gearman-connection/issues)
 
 A simple and clean library to get informations from your [gearman](http://gearman.org/) jobserver.
 
@@ -8,7 +10,7 @@ A simple and clean library to get informations from your [gearman](http://gearma
 
     require_once __DIR__ . '/../vendor/autoload.php';
     
-    use EnlightenedDC\Gearman as Gearman;
+    use TM\Gearman as Gearman;
     
     $connection = new Gearman\Connection();
     $response = $connection->send(new Gearman\Request('status'));
@@ -33,3 +35,7 @@ And if you don't want an auto-connect by default:
     ...
     $connection->connect();
     ...
+
+## Contributing
+
+Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for information on how to contribute.
