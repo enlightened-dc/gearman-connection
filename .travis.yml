@@ -18,7 +18,6 @@ matrix:
   fast_finish: true
 before_install:
   - composer self-update
-install:
   - git clone https://github.com/wcgallego/pecl-gearman.git
   - cd pecl-gearman
   - phpize
