@@ -1,8 +1,6 @@
 # gearman-connection
 
-[![Build Status](https://travis-ci.org/tommy-muehle/php-gearman-connection.svg)](https://travis-ci.org/tommy-muehle/php-gearman-connection)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/tommy-muehle/php-gearman-connection/master/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/tommy-muehle/php-gearman-connection.svg)](https://github.com/php-gearman-connection/issues)
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 A simple and clean library to get informations from your [gearman](http://gearman.org/) jobserver.
 
